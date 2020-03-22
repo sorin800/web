@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ef979129f7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+    <title>Landing Page</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 30px;
+        }
+
+        .img{
+            width: 100%;
+            height: 100vh;
+            background: url('./img/landscape2.jpg') no-repeat center center/cover;
+        }
+        #logo{
+            font-family: 'Indie Flower', cursive;
+
+        }
+        .img ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .img ul li{
+            padding:20px;
+            list-style: none;
+            flex:.2;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .img ul li:first-child{
+
+            flex:3;
+            text-align: left;
+            margin-left: 60px;
+            font-size:40px;
+        }
+        .toggle{
+            display:none;
+        }
+        .img ul li a{
+            text-decoration: none;
+            color:#fff;
+            transition: 0.3s;
+        }
+
+        .img ul li a:hover{
+            border-bottom: 3px solid #143840;
+        }
+
+        .content{
+            align-self: center;
+            max-width: 960px;
+            text-align: center;
+            margin:300px auto;
+        }
+        .content h1{
+            font-family: 'Indie Flower', cursive;
+            margin-bottom: 20px;
+            color:#fff;
+            font-size:60px;
+        }
+        .content h3{
+            font-size:40px;
+            font-family: 'Indie Flower', cursive;
+            margin-bottom: 20px;
+            color:#fff;
+        }
+        .content button{
+            padding:10px;
+        }
+        #my-work{
+            padding:20px;
+            font-size:20px;
+            font-weight: bold;
+            border:none;
+            background:transparent;
+            border:2px solid #333;
+            transition: 0.3s;
+        }
+        #my-work:hover{
+            background:#143840;
+            color:#fff;
+        }
+        .section-1{
+            /* max-width: 960px; */
+            /* height:450px; */
+            background:#fff;
+        }
+        .skill-descrip{
+            font-size:20px;
+        }
+        .container{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .elem{
+            flex:1;
+            padding:40px;
+            text-align: center;
+        }
+        #interest{
+            padding:40px;
+            text-align: center;
+        }
+        .icon{
+            font-size:50px;
+            color:#143840;
+        }
+        #my-photo{
+            border-radius: 50%;
+        }
+        .section-2-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding:60px;
+            background: #E1EBEB;
+        }
+        #about-me-details{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #about-me,#work-experience{
+            font-weight: bold;
+        }
+        #about-me{
+            border-right: 2px solid black;
+            flex:1;
+        }
+        #about-me h1{
+            text-align: center;
+        }
+        #about-me p{
+            margin: 10px 10px;
+            text-align: justify;
+        }
+        #work-experience{
+            flex:2;
+            margin-left: 20px;
+        }
+        #work-experience h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #work-experience p{
+            text-align: justify;
+        }
+        .section-3{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .section-3-elem{
+            flex:1;
+            text-align: center;
+            padding:100px;
+        }
+        #first{
+            background:#496D89;
+        }
+        #second{
+            background:ivory;
+        }
+        #third{
+            background:#764B8E;
+        }
+        .footer-container{
+            /* margin-top:30px; */
+            padding:20px;
+            background: #333;
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .footer-elem{
+            color:#fff;
+        }
+        .footer-elem:first-child{
+            margin-left: 40px;
+        }
+        #copyright{
+            flex:5;
+        }
+        #youtube,#twitter,#instagram,#linkedin{
+            flex:.2;
+            font-size:40px;
+        }
+        #name{
+            font-family: 'Indie Flower', cursive;
+            color:#143840;
+        }
+        #clients{
+            font-size:40px;
+            color:#143840;
+        }
+        #hours{
+            font-size:40px;
+            color:#143840;
+
+        }
+        #projects{
+            font-size:40px;
+            color:#143840;
+        }
+        .section-3-elem span{
+            display: block;
+            margin-top:10px;
+            font-size: 30px;
+        }
+        /* Responsiveness */
+        /* Navbar */
+        @media only screen and (max-width: 615px) {
+            .content{
+                margin:150px auto;
+            }
+            .content h1{
+                font-size: 45px;
+            }
+            .content h3{
+                font-size: 40px;
+            }
+            .logo{
+                display: none;
+            }
+            .img ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+         @media only screen and (max-width: 1080px) {
+            .section-2-container #about-me{
+                border-right:none;
+            }
+            .section-2-container #work-experience{
+                display: none;
+                border:none;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="img">
+            <ul>
+                <li class="logo"><a href="#"><span id="logo">TSV</span></a></li>
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">About</a></li>
+                <li class="item"><a href="#">Blog</a></li>
+                <li class="item"><a href="#">Contact</a></li>
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+            <div class="content">
+                <h1>Hello, I am <span id="name">Truica Sorin</span></h1>
+                <h3>Backend Developer</h3>
+                <button id="my-work">View My Work</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="section-1">
+        <h1 id="interest">Skills Overview</h1>
+        <div class="container">
+            <div class="elem elem-1">
+                <h3>CONCEPTING</h3>
+                <span class="icon"><i class="far fa-lightbulb"></i></span>
+                <p class="skill-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla incidunt placeat provident dolores ratione recusandae dicta magnam eos veritatis sed?</p>
+            </div>
+            <div class="elem elem-2">
+                <h3>FRONTEND</h3>
+                <span class="icon"><i class="fab fa-css3"></i></span>
+                <p class="skill-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla incidunt placeat provident dolores ratione recusandae dicta magnam eos veritatis sed?</p>
+            </div>
+            <div class="elem elem-3">
+                <h3>BACKEND</h3>
+                <span class="icon"><i class="far fa-file-code"></i></i></span>
+                <p class="skill-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla incidunt placeat provident dolores ratione recusandae dicta magnam eos veritatis sed?</p>
+            </div>
+            <div class="elem elem-4">
+                <h3>LINUX</h3>
+                <span class="icon"><i class="fab fa-linux"></i></span>
+                <p class="skill-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla incidunt placeat provident dolores ratione recusandae dicta magnam eos veritatis sed?</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="section-2-container">
+            <div id="about-me">
+                <h1>About Me</h1>
+                <div id="about-me-details">
+                    <img id="my-photo" src="./img/icon.jpg" alt="my-photo">
+                    <p>Hi! I'm Sorin, a backend developer.</p>
+                </div>
+                <p>Passionate about programming, currently looking into getting better at front-end development. </p>
+            </div>
+            <div id="work-experience">
+                <h1>Work Experience</h1>
+                <span id="period">September 2019 - Present</span>
+                <span id="position">| Position: Integration Developer</span>
+                <p id="work-details">Worked as a backend developer on different projects based on microservices using spring boot.</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <div class="section-3">
+        <span></span>
+        <div class="section-3-elem" id="first">
+            <span id="clients"><i class="fas fa-users"></i></span>
+            <h1 id="section3-title-1">Clients</h1>
+            <span class="section-3-text">100</span>
+        </div>
+        <div class="section-3-elem" id="second">
+            <span id="hours"><i class="fas fa-hourglass-half"></i></span>
+            <h1 id="section3-title-2">Hours Worked</h1>
+            <span class="section-3-text">100</span>
+        </div>
+        <div class="section-3-elem" id="third">
+            <span id="projects"><i class="far fa-folder-open"></i></span>
+            <h1 id="section3-title-3">Projects Completed</h1>
+            <span class="section-3-text">100</span>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <span class="footer-elem" id="copyright">
+                Copyright 2020, All Rights Reserved
+            </span>
+            <span class="footer-elem" id="youtube"><i class="fab fa-youtube"></i></span>
+            <span class="footer-elem" id="twitter"><i class="fab fa-twitter"></i></span>
+            <span class="footer-elem" id="linkedin"><i class="fab fa-linkedin"></i></span>
+            <span class="footer-elem" id="instagram"><i class="fab fa-instagram"></i></span>
+        </div>
+    </footer>
+</body>
+</html>
